@@ -1,0 +1,79 @@
+body{
+  margin: 0;
+  padding: 20px;
+  background: #e1e1e1;
+}
+.spandex{
+  height: auto;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.spandex.collapsed{
+  overflow: hidden;
+  height: 220px;
+}
+.box{
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 200px;
+  height: 200px;
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  background: #fff;
+}
+.box progress{
+  position: absolute;
+  top: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 1;
+  height: 4px;
+  width: 100%;
+}
+.box h4{
+  text-align: center;
+}
+.box .badge{
+ position: absolute;
+}
+.box .logo{
+  height: 120px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.box .logo img{
+  width: auto;
+  max-width: 160px;
+  height: auto;
+  max-height: 120px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  
+}
+.more{
+  border: none;
+  background: none;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 40px;
+}
+.box.absolute{
+  width: 30px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
