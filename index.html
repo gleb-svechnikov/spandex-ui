@@ -2,25 +2,25 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
   <script src="controller.js"></script>
   <link rel="stylesheet" href="style.css" media="all">
   <title>Spandex UI</title>
 </head>
-<body ng-controller="controller">
+<body ng-controller="controller" class="ng-cloak">
 <section>
   <ul class="spandex" ng-class="{collapsed: collapsed}">
       <li ng-repeat="item in items" class="box" ng-click="openLink()" >
-          <progress value="{{item.progress}}" max="100"> </progress>
+          <progress value="{{item.popularity * 10}}" max="100"> </progress>
           <div class="logo">
-            <img class="logo" src="{{item.logo}}">
+            <img class="logo" ng-src="{{item.logo}}">
           </div>
           <h4 class="title">{{item.name}}</h4>
           <div class="discription">{{item.description}}</div>
-          <div class="badge">{{item.badge}}</div>
+          <div class="badge" ng-if="item.badge">{{item.badge}}</div>
       </li>
       <li class="box absolute" ng-show="collapsed">
-        <button class="more" ng-click="collapsed = !collapsed" tooltip="Show all items">...</button>
+        <button class="more" ng-click="collapsed = !collapsed" tooltip="Show all items">…</button>
       </li>
     </ul>
   </section>
